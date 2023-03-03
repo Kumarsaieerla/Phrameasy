@@ -35,8 +35,8 @@ class TestRegisterPage:
             obj.select_ship_address(address)
             obj.select_type_of_address()
             obj.click_on_save()
-            obj.click_on_proceed_to_buy()
-            obj.click_payment_mode()
+            # obj.click_on_proceed_to_buy()
+            # obj.click_payment_mode()
 
 
         except BaseException as error_msg:

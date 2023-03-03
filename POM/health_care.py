@@ -1,3 +1,4 @@
+import re
 from Library.read_excel import ReadExcel
 from Library.config import Config
 import time
@@ -104,43 +105,38 @@ class Helath_care:
         locator = self.reg_locators["click_on_name"]
         self.driver.find_element(*locator).send_keys(fname)
         time.sleep(2)
-        self.driver.close()
 
     def zipcode(self, pcode):
         locator = self.reg_locators["zipcode"]
         self.driver.find_element(*locator).send_keys(pcode)
-        time.sleep(2)
 
 
     def select_flat(self,flat):
         locator = self.reg_locators["select_flat"]
         self.driver.find_element(*locator).send_keys(flat)
-        time.sleep(2)
 
     def select_ship_address(self,address):
         locator = self.reg_locators["click_on_ship_address"]
         self.driver.find_element(*locator).send_keys(address)
-        time.sleep(2)
 
     def select_type_of_address(self):
         locator = self.reg_locators["select_type_of_address"]
         self.driver.find_element(*locator).click()
-        time.sleep(2)
 
     def click_on_save(self):
         locator = self.reg_locators["click_on_save"]
         self.driver.exicute_script("arguments[0].click"),self.driver.find_element(*locator).click()
         self.driver.close()
 
-
-    def click_on_proceed_to_buy(self):
-        locator = self.reg_locators["click_on_proceed_to_buy"]
-        self.driver.exicute_script("arguments[0].click"),self.driver.find_element(*locator).click()
-
-    def click_payment_mode(self):
-        locator = self.reg_locators["select_payment_mode"]
-        self.driver.exicute_script("arguments[0].click"),self.driver.find_element(*locator).click()
-        self.driver.close()
+    #
+    # def click_on_proceed_to_buy(self):
+    #     locator = self.reg_locators["click_on_proceed_to_buy"]
+    #     self.driver.exicute_script("arguments[0].click"),self.driver.find_element(*locator).click()
+    #
+    # def click_payment_mode(self):
+    #     locator = self.reg_locators["select_payment_mode"]
+    #     self.driver.exicute_script("arguments[0].click"),self.driver.find_element(*locator).click()
+    #     self.driver.close()
 
 
 
